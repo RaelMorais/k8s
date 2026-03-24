@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image:
+  repository: next-prod
+  tag: "2"
+  pullPolicy: IfNotPresent
+
+ingress:
+  enabled: true
+  className: nginx
+  host: prod.next.local
+
+env:
+  APP_ENV: prod
