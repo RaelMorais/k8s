@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/RaelMorais/k8s.git
-    targetRevision: main
+    targetRevision: master
     path: k8s/base
     helm:
       valueFiles:
