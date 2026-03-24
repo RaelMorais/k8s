@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image:
+  repository: next-poc
+  tag: local
+  pullPolicy: IfNotPresent
+
+ingress:
+  enabled: true
+  className: nginx
+  host: dev.next.local
+
+env:
+  APP_ENV: dev

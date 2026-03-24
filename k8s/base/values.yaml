@@ -1,0 +1,26 @@
+nameOverride: ""
+fullnameOverride: ""
+
+replicaCount: 1
+
+image:
+  repository: next-poc
+  tag: local
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+
+ingress:
+  enabled: true
+  className: nginx
+  host: app.local
+  path: /
+  pathType: Prefix
+
+env:
+  APP_ENV: base
+
+resources: {}

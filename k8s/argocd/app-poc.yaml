@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: next-poc
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 
+    targetRevision: main
+    path: k8s/base
+    helm:
+      valueFiles:
+        - ../envs/poc-values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: poc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
