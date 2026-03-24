@@ -11,7 +11,7 @@ spec:
     path: k8s/base
     helm:
       valueFiles:
-        - ../envs/dev-values.yaml
+        - ../envs/prod-values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: prod
