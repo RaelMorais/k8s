@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: next-poc
-  tag: local
+  tag: "2"
   pullPolicy: IfNotPresent
 
 ingress:
