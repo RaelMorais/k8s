@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image:
+  repository: next-qa
+  tag: "2"
+  pullPolicy: IfNotPresent
+
+ingress:
+  enabled: true
+  className: nginx
+  host: qa.next.local
+
+env:
+  APP_ENV: qa
