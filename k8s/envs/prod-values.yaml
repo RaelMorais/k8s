@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: next-prod
-  tag: "v2"
+  tag: "2"
   pullPolicy: IfNotPresent
 
 ingress:
