@@ -1,8 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: next-poc
-  tag: "2"
+  repository: next-prod
+  tag: "1"
   pullPolicy: IfNotPresent
 
 ingress:
